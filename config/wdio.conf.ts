@@ -125,7 +125,8 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-  services: ['chromedriver'],
+  // services: [['chromedriver', { drivers: { chrome: '109.0.5414.74' } } ]],
+  services: [['chromedriver', { drivers: { chrome: '109.0.5414.119' } }]],
     // services: [['geckodriver', { firefox: 'latest' }], ['chromedriver', { chrome: 'latest' }]],
 
     // Framework you want to run your specs with.
@@ -148,12 +149,12 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-  // reporters: ['spec', ['allure', {
-  //   outputDir: 'allure-results',
-  //   disableWebdriverStepsReporting: false,
-  //   disableWebdriverScreenshotsReporting: true,
-  // }]],
-    reporters: ['spec'],
+    reporters: ['spec', ['allure', {
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: false,
+      disableWebdriverScreenshotsReporting: true,
+    }]],
+    // reporters: ['spec'],
 
 
 

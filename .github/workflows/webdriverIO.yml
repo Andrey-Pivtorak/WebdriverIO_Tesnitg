@@ -14,8 +14,8 @@ jobs:
         - name: Test
           run: npm run wdio
         - name: Upload Results
-          uses: actions/upload-artifact@v1
+          uses: actions/upload-artifact@v3
           if: failure()
           with:
-            name: allure-results
-            path: ./allure-results
+            name: allure-result
+            path: ./allure-result

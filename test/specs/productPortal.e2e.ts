@@ -14,9 +14,10 @@ describe('Check opening the information pop up windows of the "Elastic SIP Trunk
   it('Should click the "Trunking" items', async () => {
     const items = await $$(ProductPortalPage.trunkingItemLocator);
     for (let i = 0; i < items.length; i++) {
-      await items[i].click();
+      items[i].click();
       await browser.pause(2000);
       await ProductPortalPage.isElementDisplayed('.uO7EXKnb24RbOlSyulqc');
+      await browser.pause(1000);
       ProductPortalPage.click(ProductPortalPage.closeBtn);
       await browser.pause(1000);
     };

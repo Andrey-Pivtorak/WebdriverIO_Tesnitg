@@ -77,6 +77,7 @@ describe('Check displaying "Frequently Asked Questions"', () => {
   });
 
   it('Click "+" of "How to Search Phone Numbers" question', async () => {
+    NumberLookup.scrollElementIntoViewTop(NumberLookup.lastQuestion);
     NumberLookup.click(NumberLookup.lastQuestion);
     await browser.pause(2000);
     await (await $('dd[data-faq-answer="6"]')).isDisplayed();
