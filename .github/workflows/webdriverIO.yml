@@ -1,0 +1,37 @@
+name: WebdriverIO testing
+on:
+  push:
+    branches: [main]
+jobs:
+  Run_test:
+    runs-on: ubuntu-20.04 # Choosing OS
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install
+        run: npm install
+      - name: Run tests
+        run: npm run wdio
+        continue-on-error: true
+      - name: Upload Results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: allure-results
+          path: ./allure-results # Name of the folder with allure results
+      - name: Publishing Allure artifact to Github Actions
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
+      - name: Deploy report
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: allure-report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
