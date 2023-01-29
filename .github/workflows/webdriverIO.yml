@@ -1,4 +1,4 @@
-name: Postman API testing
+name: Webdriver testing
 on:
   push:
     branches: [main]
