@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"dd[data-faq-answer=\"6\"]\"}\n  (Session info: headless chrome=109.0.5414.74)",
-  "stacktrace": "#0 0x555e82c04303 <unknown>\n#1 0x555e829d8d37 <unknown>\n#2 0x555e82a155b2 <unknown>\n#3 0x555e82a156c1 <unknown>\n#4 0x555e82a4fb34 <unknown>\n#5 0x555e82a359ad <unknown>\n#6 0x555e82a4d88c <unknown>\n#7 0x555e82a35753 <unknown>\n#8 0x555e82a08a14 <unknown>\n#9 0x555e82a09b7e <unknown>\n#10 0x555e82c5332e <unknown>\n#11 0x555e82c56c0e <unknown>\n#12 0x555e82c39610 <unknown>\n#13 0x555e82c57c23 <unknown>\n#14 0x555e82c2b545 <unknown>\n#15 0x555e82c786a8 <unknown>\n#16 0x555e82c78836 <unknown>\n#17 0x555e82c93d13 <unknown>\n#18 0x7f4a2750f609 start_thread\n"
-}
