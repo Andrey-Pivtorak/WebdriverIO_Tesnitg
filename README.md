@@ -25,6 +25,6 @@
 * npm run allure:report
 
 ### You must have these result:
-![](https://github.com/Andrey-Pivtorak/)
+![](https://github.com/Andrey-Pivtorak/WebdriverIO_Tesnitg/blob/master/test/screnns_result/test_cases_WebdriverIO.png)
 ![](https://github.com/Andrey-Pivtorak/)
 
