@@ -1,38 +1,20 @@
 name: Webdriver testing
-on:
-  push:
-    branches: [main]
+on: [push, pull_request]
 jobs:
-  Run_test:
-    runs-on: ubuntu-20.04 # Choosing OS
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.1
-      - name: Install Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-      - run: npm i npm@latest
-      - run: npm i
-
-      - name: run test
-        run: npm run wdio
-
-      - name: Upload Results
-        uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: allure-results
-          path: ./allure-results # Name of the folder with allure results
-      - name: Publishing Allure artifact to Github Actions
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: allure-report
-          path: allure-report
-      - name: Deploy report
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: allure-report
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: Checkout
+          uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 18
+        - name: Install
+          run: npm install
+        - name: Test
+          run: npm run test:local
+        - uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: logs
+            path: logs
