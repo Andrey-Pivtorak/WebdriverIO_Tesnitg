@@ -1,3 +1,4 @@
+.gitignore/
 allure-report/
 allure-results/
 examples/

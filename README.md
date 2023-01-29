@@ -9,7 +9,7 @@
 
     **git clone https://github.com/**
 
-* _move to the Webdriver_Testing folder, using the command:_
+* _move to the WebdriverIO_Testing folder, using the command:_
 
     **cd Webdriver_Testing**
 
