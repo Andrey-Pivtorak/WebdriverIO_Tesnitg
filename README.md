@@ -7,11 +7,11 @@
 
 * _open the command line (or terminal, if VS Code or another apps are used) and copy the repository. Enter the command:_
 
-    **git clone https://github.com/**
+    **git clone https://github.com/Andrey-Pivtorak/WebdriverIO_Testing.git**
 
 * _move to the WebdriverIO_Testing folder, using the command:_
 
-    **cd Webdriver_Testing**
+    **cd WebdriverIO_Testing**
 
 * _install all dependencies, using the command:_
 
@@ -20,11 +20,11 @@
 ### To start testing enter the command in a command line (or in terminal, if VS Code or another apps are used):
 * npm run wdio
 
-### To create allure report enter commands:
+### To create and open the allure report enter command:
 
 * npm run allure:report
 
 ### You must have these result:
 ![](https://github.com/Andrey-Pivtorak/WebdriverIO_Tesnitg/blob/master/test/screnns_result/test_cases_WebdriverIO.png)
-![](https://github.com/Andrey-Pivtorak/)
+![](https://github.com/Andrey-Pivtorak/WebdriverIO_Tesnitg/blob/master/test/screnns_result/test_cases_WebdriverIO_GH.png)
 
