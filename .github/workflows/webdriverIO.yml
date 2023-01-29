@@ -1,28 +1,38 @@
-name: WebdriverIO testing
-#on: [push, pull_request]
+name: Postman API testing
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    # Sequence of patterns matched against refs/heads
-    branches:
-      - main
+    branches: [main]
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  Run_test:
+    runs-on: ubuntu-20.04 # Choosing OS
     steps:
-        - name: Checkout
-          uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 18
-        - name: Install
-          run: npm install
-        - name: Test
-          run: npm run wdio
-          continue-on-error: true
-        - uses: actions/upload-artifact@v3
-          with:
-            name: allureReport
-            path: ./reports/allure/allure-report
+      - uses: actions/checkout@v2.3.1
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - run: npm i npm@latest
+      - run: npm i
+
+      - name: run test
+        run: npm run wdio
+
+      - name: Upload Results
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: allure-results
+          path: ./allure-results # Name of the folder with allure results
+      - name: Publishing Allure artifact to Github Actions
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: allure-report
+      - name: Deploy report
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: allure-report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
