@@ -70,7 +70,7 @@ export const config: Options.Testrunner = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
-        args: ['--start-maximized', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1500,800', '--allow-insecure-localhost', '--ignore-certificate-errors']
+        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage']
       }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -148,7 +148,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-  reporters: [['allure', {
+  reporters: ['spec', ['allure', {
     outputDir: 'allure-results',
     disableWebdriverStepsReporting: false,
     disableWebdriverScreenshotsReporting: true,
