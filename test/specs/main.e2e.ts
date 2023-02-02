@@ -9,7 +9,7 @@ before('Open the page', async () => {
 
 describe('Сheck drop down menu appearances', () => {
   const tabs = MainPage.arrayTabs;
-  const tabNames = MainPage.arrayAppNames;
+  const tabNames = MainPage.arrayTabNames;
   for (let i = 0; i < tabs.length; i++) {
     it(`Hover the "${tabNames[i]}" tab`, async () => {
       MainPage.hoverElement(tabs[i]);

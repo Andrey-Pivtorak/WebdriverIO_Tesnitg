@@ -16,14 +16,14 @@ describe('Check working the "free International Lookup"', () => {
   it('Choose the country "Ukraine"', async () => {
     NumberLookup.click(NumberLookup.countrySelect);
     NumberLookup.click(NumberLookup.country);
-    await browser.pause(2000);
+    await browser.pause(3000);
   });
 
   it('Enter phone number', async () => {
-    NumberLookup.setValue(NumberLookup.phoneInput, NumberLookup.phone);
-    await browser.pause(2000);
+    await $(NumberLookup.phoneInput).addValue(NumberLookup.phone);
+    await browser.pause(3000);
     const currentPhoneInputValue = (await $(NumberLookup.phoneInput).getValue()).split(' ').join('');
-    if (currentPhoneInputValue != NumberLookup.phone) {
+    if (currentPhoneInputValue != ('+380' + NumberLookup.phone)) {
       throw new Error("Incorrect phone number");
     }
   });

@@ -7,7 +7,7 @@ class NumberLookup extends Page {
   countrySelect = 'div.dCDohY';
   country = '//div[contains(text(),"Ukraine")]';
   phoneInput = '#number-lookup-input';
-  phone = '+380679453829';
+  phone = '679453829';
   termsCheckBox = '#numberLookup-termsCheckbox';
   lookupNumberButton = 'button.itIjRb';
 

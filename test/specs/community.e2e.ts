@@ -39,7 +39,7 @@ describe('Check switching pages', () => {
   for (let i = 0; i < pages.length; i++) {
     it(`Should open the page № ${pagesText[i]}`, async () => {
       CommunityPage.click(pages[i]);
-      await browser.pause(2000);
+      await browser.pause(3000);
       const url = await browser.getUrl();
       if (!(url.includes(`page=${pagesText[i]}`))) {
         throw new Error("The current page doesn't match to the chosen number!");
