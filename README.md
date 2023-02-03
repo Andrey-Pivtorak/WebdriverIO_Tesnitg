@@ -38,6 +38,10 @@
 
 ### To run docker tests use the command:
 
+* cd docker
+
+* docker-compose -f docker-compose-tests.yml up -d
+
 * npm run wdio:docker
 
 ### To stop docker testing use the command:
