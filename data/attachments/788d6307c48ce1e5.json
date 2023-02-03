@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h3[contains(text(),\"темы\")]\"}\n  (Session info: headless chrome=109.0.5414.119)",
-  "stacktrace": "#0 0x55aa942a0303 <unknown>\n#1 0x55aa94074d37 <unknown>\n#2 0x55aa940b15b2 <unknown>\n#3 0x55aa940b16c1 <unknown>\n#4 0x55aa940ebb34 <unknown>\n#5 0x55aa940d19ad <unknown>\n#6 0x55aa940e988c <unknown>\n#7 0x55aa940d1753 <unknown>\n#8 0x55aa940a4a14 <unknown>\n#9 0x55aa940a5b7e <unknown>\n#10 0x55aa942ef32e <unknown>\n#11 0x55aa942f2c0e <unknown>\n#12 0x55aa942d5610 <unknown>\n#13 0x55aa942f3c23 <unknown>\n#14 0x55aa942c7545 <unknown>\n#15 0x55aa943146a8 <unknown>\n#16 0x55aa94314836 <unknown>\n#17 0x55aa9432fd13 <unknown>\n#18 0x7f2a1c021609 start_thread\n"
-}
